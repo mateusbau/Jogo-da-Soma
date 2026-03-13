@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Contas Matemáticas</title>
+    <link rel="stylesheet" href="contas.css">
+    
+</head>
+<body>
+ 
+    <div class="container">
+
+        <h1>Jogo de Contas Matemáticas</h1>
+
+        <!-- CONFIGURAÇÕES DO JOGO -->
+        <section class="config">
+
+            <div class="config-group">
+                <h2>Operação</h2>
+                <div class="buttons">
+                    <button data-operacao="+">+</button>
+                    <button data-operacao="-">−</button>
+                    <button data-operacao="*">×</button>
+                    <button data-operacao="/">÷</button>
+                </div>
+            </div>
+
+            <div class="config-group">
+                <h2>Nº de Algarismos</h2>
+                <select id="algarismos">
+                    <option value="1">1 algarismo</option>
+                    <option value="2">2 algarismos</option>
+                    <option value="3">3 algarismos</option>
+                    <option value="4">4 algarismos</option>
+                </select>
+            </div>
+
+            <div class="config-group">
+                <h2>Nº de Operações</h2>
+                <select id="quantidade">
+                    <option value="2">2 contas</option>
+                    <option value="3">3 contas</option>
+                    <option value="4">4 contas</option>
+                </select>
+            </div>
+<p id="alertaIniciar" style="font-size: small; color: rgb(255, 0, 0);"></p>
+            <button id="btnIniciar"><b>Iniciar Jogo</b></button>
+        </section>
+
+        <!-- ÁREA DO JOGO -->
+        <section class="game-area">
+            <div id="conta">Clique em "Iniciar Jogo"</div>
+
+            <input 
+                type="number" 
+                id="resposta" 
+                placeholder="Sua resposta" 
+                disabled
+            >
+
+            <button id="btnResponder" disabled>Responder</button>
+        </section>
+
+        <!-- INFORMAÇÕES -->
+        <section class="info">
+            <div>
+                ⏱️ Tempo: <span id="tempo">0</span>s
+            </div>
+            <div>
+            <span id="acerto"></span>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+<script src="contas.js"></script>
+</html>
